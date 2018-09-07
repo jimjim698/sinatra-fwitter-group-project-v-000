@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
   has_many :tweets
 
   def slug
-  self.username
+  array = self.username.split(" ")
+  slug= array.join
+  slug
 end
 
 #.gsub(" ","-").downcase
