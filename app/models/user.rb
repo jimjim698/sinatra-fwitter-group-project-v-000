@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   def slug
   array = self.username.split(" ")
-  slug= array.join
+  slug= array.join("-")
   slug
 end
 
